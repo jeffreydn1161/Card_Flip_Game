@@ -1,6 +1,13 @@
+'''
+This is a basic card flipping solution class
+
+Created by Jeffrey Norris on 10/15/2018
+'''
+
 class Sort_Cards2():
     key = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
 
+    # Main function that creates an output array that will flip into the "key"
     def sort(self):
         indexes = []
         output = [None] * len(self.key)
@@ -18,6 +25,7 @@ class Sort_Cards2():
         print output
         self.continue_key(output)
 
+    # If you want to continue to have it solve using the new key as the answer key you can.
     def continue_key(self, new_key):
         question = 'Would you like to contiue with this new key?'
         reply = str(raw_input(question + '\n(y or n): ')).lower().strip()
