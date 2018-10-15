@@ -16,14 +16,14 @@ class Sort_Cards2():
                     x = indexes.pop(0)
                     indexes.append(x)
         print output
-        # self.continue_key()
+        self.continue_key(output)
 
     def continue_key(self, new_key):
         question = 'Would you like to contiue with this new key?'
         reply = str(raw_input(question + '\n(y or n): ')).lower().strip()
         if reply[0] == 'y':
             self.key = new_key
-            return
+            self.sort()
         if reply[0] == 'n':
             print 'Thanks for playing'
             return
